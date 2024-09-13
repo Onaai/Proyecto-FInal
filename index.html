@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interfaz de Archivos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Inicio</h1>
+        <p>Acá van tus archivos guardados</p>
+    </header>
+    <main>
+        <div class="search-sort">
+            <input type="text" placeholder="Placeholder" id="search">
+            <div class="sort">
+                <label for="sort">Ordenar por:</label>
+                <select id="sort">
+                    <option value="date">Fecha de subida</option>
+                    <option value="name">Nombre</option>
+                </select>
+                <div class="view-options">
+                    <span class="grid-view active"></span>
+                    <span class="list-view"></span>
+                </div>
+            </div>
+        </div>
+        <div class="grid" id="fileGrid">
+            <!-- Aquí se insertarán los archivos subidos -->
+        </div>
+    </main>
+    <footer>
+        <input type="file" id="fileInput" multiple style="display: none;">
+        <button class="upload-btn" onclick="document.getElementById('fileInput').click();">
+            +
+        </button>
+    </footer>
+
+    <div id="previewModal" class="modal">
+        <span class="close">&times;</span>
+        <div class="modal-content">
+            <img id="previewImage" style="display: none;">
+            <video id="previewVideo" controls style="display: none;"></video>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

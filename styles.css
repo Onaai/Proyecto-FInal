@@ -1,0 +1,142 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+}
+
+main {
+    padding: 20px;
+}
+
+.search-sort {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.search-sort input[type="text"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 300px;
+}
+
+.search-sort .sort {
+    display: flex;
+    align-items: center;
+}
+
+.search-sort .sort label {
+    margin-right: 10px;
+}
+
+.search-sort .sort select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.view-options {
+    display: flex;
+    margin-left: 10px;
+}
+
+.view-options span {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: #ccc;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.view-options .grid-view.active,
+.view-options .list-view.active {
+    background-color: #333;
+}
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.grid .file-item {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: calc(50% - 20px);
+    padding: 10px;
+    cursor: pointer;
+}
+
+.grid .file-item img,
+.grid .file-item video {
+    max-width: 100px; /* Ajusta el tamaño máximo aquí */
+    max-height: 100px;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.grid .file-item p {
+    margin: 10px 0 0;
+}
+
+footer {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+
+.upload-btn {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 20px;
+    border-radius: 50%;
+    font-size: 24px;
+    cursor: pointer;
+    width: 60px; /* Ajusta el tamaño del botón */
+    height: 60px; /* Ajusta el tamaño del botón */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.9);
+}
+
+.modal-content {
+    margin: 15% auto;
+    padding: 20px;
+    width: 80%;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    color: #fff;
+    font-size: 35px;
+    font-weight: bold;
+    cursor: pointer;
+}
